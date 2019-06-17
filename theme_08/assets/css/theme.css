@@ -1,0 +1,696 @@
+/* ======================================================== */
+/* ==============GLOBAL VAR DECLARATION START============== */
+/* ======================================================== */
+:root {
+    --custom-alpha-color: #4d7d04; 
+    --custom-gamma-color: #0154e3; 
+    --custom-beta-color: #132b7a; 
+    --custom-delta-color: #255ba5;
+}
+a, a:hover, a:focus {text-decoration: none;color: inherit;outline:none;}
+/* ======================================================== */
+/* ==============GLOBAL VAR DECLARATION END================ */
+/* ======================================================== */
+
+/* ================================================== */
+/* ================FLATICON CSS START================ */
+/* ================================================== */
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.eot");
+    src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Flaticon.woff2") format("woff2"),
+        url("../fonts/Flaticon.woff") format("woff"),
+        url("../fonts/Flaticon.ttf") format("truetype"),
+        url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: inherit;
+    font-style: normal;
+}
+
+.flaticon-delete:before { content: "\f100"; }
+.flaticon-edit-2:before { content: "\f101"; }
+.flaticon-edit-1:before { content: "\f102"; }
+.flaticon-more-2:before { content: "\f103"; }
+.flaticon-more-1:before { content: "\f104"; }
+
+/* ================================================== */
+/* ================FLATICON CSS END================== */
+/* ================================================== */
+
+/* ================================================ */
+/* ================COMMON CSS START================ */
+/* ================================================ */
+html {font-size:14px;}
+body, body * {box-sizing: border-box;}
+body {
+    background-color: #ebf2f8;
+    background-color: #f3f2f1;
+    font-size:1rem;
+    font-family: 'Heebo', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+.page_wrapper {width: 100%;min-height: 100vh;position: relative;}
+.page_wrapper:after {content: "";display: block;clear: both;}
+.pt-15, .py-15 {padding-top: 15px;}
+.pb-15, .py-15 {padding-bottom: 15px;}
+.pl-15, .px-15 {padding-left: 15px;}
+.pr-15, .px-15 {padding-right: 15px;}
+.p-15 {padding: 15px;}
+.pt-20, .py-20 {padding-top: 20px;}
+.pb-20, .py-20 {padding-bottom: 20px;}
+.pl-20, .px-20 {padding-left: 20px;}
+.pr-20, .px-20 {padding-right: 20px;}
+.p-20 {padding: 20px;}
+.pt-30, .py-30 {padding-top: 30px;}
+.pb-30, .py-30 {padding-bottom: 30px;}
+.pl-30, .px-30 {padding-left: 30px;}
+.pr-30, .px-30 {padding-right: 30px;}
+.p-30 {padding: 30px;}
+
+.mt-15, .my-15 {margin-top: 15px;}
+.mb-15, .my-15 {margin-bottom: 15px;}
+.ml-15, .mx-15 {margin-left: 15px;}
+.mr-15, .mx-15 {margin-right: 15px;}
+.m-15 {margin: 15px;}
+.mt-30, .my-30 {margin-top: 30px;}
+.mb-30, .my-30 {margin-bottom: 30px;}
+.ml-30, .mx-30 {margin-left: 30px;}
+.mr-30, .mx-30 {margin-right: 30px;}
+.m-30 {margin: 30px;}
+
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.flex-row {
+    -ms-flex-direction: row!important;
+    flex-direction: row!important;
+}
+.flex-column {
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+}
+.justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.justify-content-around {
+    -ms-flex-pack: distribute!important;
+    justify-content: space-around!important;
+}
+.align-items-center {
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+.flex-grow-1 {
+    -ms-flex-positive: 1!important;
+    flex-grow: 1!important;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.w-100 {width:100%;}
+.bg-white {background: #fff !important;}
+
+
+
+/* ================================================ */
+/* ================COMMON CSS END================== */
+/* ================================================ */
+
+
+/* ================================================ */
+/* ================HEADER CSS START================ */
+/* ================================================ */
+header {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    padding: 10px 30px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 41px;
+    z-index: 999;
+}
+.header_logo {
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: var(--custom-alpha-color);
+}
+.header_logo:hover, .header_logo:focus {
+    text-decoration: none;
+}
+.header_logo strong {
+    font-weight: 600;
+}
+.header-center {
+    padding: 10px 20px;
+}
+.header ul {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    text-align:center;
+}
+.menu-list, .menu-item.active .submenu-list {
+    display: flex;
+    display: -ms-flexbox;
+    align-items: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    font-size: 0.85rem;
+}
+.menu-item {
+    position: relative;
+}
+.menu-item.active {
+    position: initial;
+}
+.menu-item:not(:last-child) {
+    margin-right: 5px;
+}
+.menu-item > a {
+    color: #333;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 25px;
+    transition: all 150ms linear;
+    font-size: inherit;
+    font-weight: 500;
+    display: block;
+}
+.menu-item > a:hover, .menu-item > a:focus {text-decoration: none;}
+.menu-item > a:hover, .menu-item.active > a {
+    color:#fff;
+    background-color: var(--custom-alpha-color);
+    transition: all 150ms linear;
+}
+.menu-item span {
+    display: block;
+    font-size: 22px;
+    line-height: 1;
+    color: #000;
+    vertical-align: middle;
+    display: none;
+}
+.submenu {
+    position: absolute;
+    min-width: 160px;
+    top: calc(100% + 30px);
+    left: 0;
+    background-color: #f7f7f7;
+    padding: 10px 10px;
+    box-shadow: 3px 3px 15px #dcdcdc;
+    opacity:0;
+    visibility: hidden;
+    /* transition: all 300ms linear; */
+}
+.menu-item:hover .submenu {
+    top: 100%;
+    opacity:1;
+    visibility: visible;
+    transition: all 300ms linear;
+    z-index: 10;
+}
+.menu-item.active .submenu, .menu-item.active:hover .submenu {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    padding: 15px 30px;
+    box-shadow: 0 0 0 #dcdcdc;
+    z-index: 9;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    transition: all 300ms linear;
+}
+.submenu-list {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.submenu-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.menu-item.active .submenu-list .submenu-item {
+    margin: 0 10px;
+}
+.dropdown {
+    font-size: 0.85rem;
+    position: relative;
+}
+.dropdown-btn {
+    border: 0px solid transparent;
+    background-color: transparent;
+    padding: 6px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+}
+.user-sm-pic {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+}
+.user-name {
+    padding: 0 0 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color:inherit;
+}
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 3px 3px 12px #dcdcdc;
+    display: none;
+    z-index: 99;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content li {
+    margin: 10px;
+    text-align: center;
+}
+.dropdown-content a, .dropdown-content button {
+    font-size: inherit;
+}
+
+.burger-icon {border: 0px solid transparent;background-color: transparent;margin-right: 30px;position: relative;padding: 0;cursor: pointer;width: 20px;height: 14px;transition: all 150ms linear;}
+body.sidebar--hide .burger-icon.active {margin-left: 80px;transition: all 150ms linear;}
+.burger-icon span {background-color: #333;height: 2px;width: 14px;position: absolute;transition: all 100ms linear;}
+.burger-icon span:nth-child(2) {left:0;top:6px;}
+.burger-icon span:first-child {top:0;}
+.burger-icon span:last-child {bottom:0;}
+.burger-icon span:first-child, .burger-icon span:last-child {right: 0;}
+.burger-icon:hover span,.burger-icon.active span {width: 100%;transition: all 100ms linear;}
+.burger-icon.active span:nth-child(2) {display: none;}
+.burger-icon.active span:first-child {top:6px;transform: rotate(45deg);}
+.burger-icon.active span:last-child {bottom:6px;transform: rotate(135deg);}
+.mk_logo img {max-height: 20px;}
+/* ================================================ */
+/* ================HEADER CSS END================== */
+/* ================================================ */
+
+/* ================================================ */
+/* ================FOOTER CSS START================ */
+/* ================================================ */
+footer {
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #fff;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.12);
+    transition: all 150ms linear;
+    text-align: center;
+}footer a {text-decoration: none;color: var(--custom-alpha-color);}
+footer a:hover, footer a:focus {text-decoration: underline;color: var(--custom-alpha-color);}
+/* ============================================== */
+/* ================FOOTER CSS END================ */
+/* ============================================== */
+
+/* ============================================== */
+/* ==========CONTENT WRAPPER CSS start=========== */
+/* ============================================== */
+main {padding-bottom: 40px;}
+.container {max-width: 1024px;margin: 0 auto;}
+.header-section {
+    padding: 20px 20px 10px;
+    background-color: #fff;
+   }
+   .page--title {
+    font-size: 2rem;
+    margin: 0 0 15px;
+    color: var(--custom-beta-color);
+    font-weight: 500;
+   }
+   .breadcrumb li:not(:last-child) {
+    padding-right: 20px;
+    position: relative;
+   }
+   .breadcrumb li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    right: 8px;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #989898;
+    border-right: 1px solid #989898;
+    transform: rotate(45deg);
+    top: 2px;
+   }
+   .breadcrumb li a, .breadcrumb li span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #989898;
+    max-width: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+   }
+   .breadcrumb li a {
+    color: var(--custom-alpha-color);
+   }
+.box-wrap {
+    background-color: #fff;
+    margin: 30px 0 0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.18);
+}
+a.btn, button.btn, .btn {
+    border: 1px solid #dcdcdc;
+    background-color: transparent;
+    display: inline-block;
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+/* ============================================== */
+/* ===============DATATABLE CSS START============ */
+/* ============================================== */
+/* DATATABLE CSS START */
+.table-section .dataTables_wrapper .dataTables_length {
+    margin-bottom: 15px;
+}
+.table-section select {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    border-radius: 2px;
+    background-color: transparent;
+}
+.table-section .dataTables_filter input[type="search"] {
+    width: auto;
+    height: auto;
+    line-height: 26px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    padding: 0 10px;
+}
+.table-section .dataTables_scrollHead {
+    background-color: #f0f0f0;
+    background-color: var(--custom-alpha-color);
+    /* background-color: var(--custom-beta-color); */
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.table-section .dataTable thead th, .table-section .dataTable thead td {
+    padding: 8px 12px;
+    border-bottom: 0px solid #cfd8dc;
+    text-align: left;
+}
+.table-section .dataTable thead th{
+    min-width: 60px;
+    color: #616161;
+    font-weight:500;
+    line-height: 30px;
+    white-space: nowrap;
+    background-image: none !important;
+    color:#fff;
+}
+.table-section .dataTables_scrollHead .dataTable thead th:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 30px;
+    vertical-align: middle;
+    line-height: inherit;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.table-section .dataTable thead .tbl_sno, .table-section .dataTable tbody .tbl_sno, .table-section .dataTable thead .tbl_action, .table-section .dataTable tbody .tbl_action{text-align:center;}
+.table-section .dataTable thead .tbl_sno, .table-section .dataTable tbody .tbl_sno {
+    width: 50px !important;
+    min-width: 50px;
+}
+.table-section .dataTable thead .tbl_action, .table-section .dataTable tbody .tbl_action {
+    width: 90px !important;
+    min-width: 90px;
+    position: relative;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+.table-section .dataTable thead .sorting:after {
+    background-image: url(../images/sort_both.png);
+}
+.table-section .dataTable thead .sorting_asc:after {
+    background-image: url(../images/sort_asc.png);
+}
+.table-section .dataTable thead .sorting_desc:after {
+    background-image: url(../images/sort_desc.png);
+}
+.table-section .dataTables_scrollHead .dataTable thead .tbl_sno:after, .table-section .dataTables_scrollHead .dataTable thead .tbl_action:after {
+    display: none;
+}
+.table-section .dataTable.stripe tbody tr.odd, .table-section .dataTable tbody tr.odd, table.striped > tbody > tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+.table-section .dataTable.hover tbody tr:hover, .table-section .dataTable tbody tr:hover, table.striped > tbody > tr:hover {
+    background-color: #f0f0f0;
+}
+.table-section .dataTables_wrapper .dataTables_info {
+    margin: 0;
+    color: #616161;
+    font-size: 0.85rem;
+    line-height: 20px;
+    padding: 5px 0 0;
+}
+.table-section .dataTables_wrapper .dataTables_paginate, .table-section .dataTables_wrapper #page-length-option_paginate {
+    margin: 0;
+    padding: 5px 0 0;
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button, .table-section .dataTables_wrapper #page-length-option_paginate .paginate_button {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    display: block;
+    border: 0px solid transparent;
+    line-height: 20px;
+    border-radius: 0;
+    min-width: 16px;
+    font-weight: 600;
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button.current, .table-section .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover, .table-section .dataTables_wrapper #page-length-option_paginate .paginate_button.current, .table-section .dataTables_wrapper #page-length-option_paginate .paginate_button.current:hover {
+    color: var(--custom-alpha-color) !important;
+    border: 0px solid #2196f3;
+    border-radius: 0;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button:not(:last-child), .table-section .dataTables_wrapper #page-length-option_paginate .paginate_button:not(:last-child) {
+    margin-right: 3px;
+}
+.table-section .dataTables_wrapper .dataTables_paginate > span {
+    display: inline-flex;
+    vertical-align: middle;
+    line-height: 20px;
+    height: 20px;
+    margin: 0 3px;
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button.previous, .table-section .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+    font-size: 0;
+    width: 16px;
+    height: 20px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0px;
+    margin: 0 !important;
+    cursor: pointer;
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button.previous:after, .table-section .dataTables_wrapper .dataTables_paginate .paginate_button.next:after {
+    content: "";
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    position: absolute;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover:after, .table-section .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover:after {
+    border-color: var(--custom-alpha-color);
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button.next:after {
+    left: 3px;
+    transform: rotate(45deg);
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button.previous:after {
+    left: 6px;
+    transform: rotate(-135deg);
+}
+.table-section .dataTables_wrapper .dataTables_paginate .paginate_button:hover, .table-section .dataTables_wrapper #page-length-option_paginate .paginate_button:hover {
+    color: var(--custom-beta-color)!important;
+    border: 0px solid #2196f3;
+    border-radius: 0;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.table-section table.dataTable.no-footer, .table-section .dataTables_wrapper.no-footer .dataTables_scrollBody {border-color: #cfd8dc;}
+
+.card-btns button, .card-btns a, .btn_common {
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 0px solid var(--custom-primary-color);
+    letter-spacing: 0.5px;
+    background: -webkit-linear-gradient(45deg, #8e24aa, #ff6e40);
+    background: -moz- oldlinear-gradient(45deg, #8e24aa, #ff6e40);
+    background: -o-linear-gradient(45deg, #8e24aa, #ff6e40);
+    background: linear-gradient(45deg, #8e24aa, #ff6e40);
+    -webkit-box-shadow: 3px 3px 20px 0 rgba(255, 110, 64, .5);
+    box-shadow: 3px 3px 20px 0 rgba(255, 110, 64, .5);
+}
+td a.btn, td button.btn, td .btn {
+    padding: 0;
+    font-size: 14px;
+    border-color: transparent;
+    background-color: #fff;
+    border: 0;
+}
+td .btn.del_btn {
+    color: red;
+}
+td .btn.edit_btn {
+    color: green;
+}
+.tbl_action .dropdown {
+    display: inline-block;
+    padding:5px 0;
+}
+.tbl_action .dropdown-btn {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 5px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--custom-alpha-color);
+}
+.tbl_action .dropdown-btn span, .tbl_action .dropdown-btn span:before {
+    display: block;
+    line-height: inherit;
+}
+.tbl_action .dropdown-content {
+    min-width: 90px;
+    right: 50%;
+    transform: translateX(50%);
+}
+/*dropdown*/
+.abc{
+    border-right: 1px solid #797878;
+    padding: 0px 4px 0px 4px;
+    margin-right: 5px;
+    font-size: 17px;
+    color: #000;
+}
+.abc1{
+    float: left;
+    width:49%;
+}
+.abc2{
+    float: right;
+    width:49%;
+}
+
+.submenu-item{
+    padding: 3px 15px;  
+}
+
+
+.dropdown {
+    font-size: 0.85rem;
+    position: relative;
+}
+.dropdown-btn {
+    border: 0px solid transparent;
+    background-color: transparent;
+    padding: 6px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+}   
+ 
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* ============================================== */
+/* ===============DATATABLE CSS END============== */
+/* ============================================== */
+
+/* ============================================== */
+/* =================MODAL CSS START============== */
+/* ============================================== */
+
+/* ============================================== */
+/* =================MODAL CSS END================ */
+/* ============================================== */
+
+/* ============================================== */
+/* ===========CONTENT WRAPPER CSS END============ */
+/* ============================================== */

@@ -1,17 +1,17 @@
 <?php 
-header('Location:https://hr.mattsenkumar.com/Quiz-Assesment/');
-exit;
+// header('Location:https://hr.mattsenkumar.com/Quiz-Assesment/');
+// exit;
 	//error_reporting(0);
 	session_start();
 	date_default_timezone_set("Asia/Kolkata");
    
-	$con = mysqli_connect("localhost","root","p@ssw0rd","quiz_assesment");
+// 	$con = mysqli_connect("localhost","root","p@ssw0rd","quiz_assesment");
    
-	// Check connection
-	if (mysqli_connect_errno())
-	{
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	}
+// 	// Check connection
+// 	if (mysqli_connect_errno())
+// 	{
+// 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+// 	}
 	
 	$date = date('Y-m-d h:i:s');
    
